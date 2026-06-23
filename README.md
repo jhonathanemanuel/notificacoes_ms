@@ -4,12 +4,24 @@
 
 Siga os passos abaixo para configurar o projeto:
 
-### 1. Ambiente Virtual
+### 1. Clonar o Repositório
+Abra o terminal na pasta onde deseja salvar o projeto e execute o comando abaixo:
+```bash
+git clone https://github.com/jhonathanemanuel/notificacoes_ms.git
+```
+
+### 2. Acessar a Pasta do Projeto
+Navegue para dentro do diretório que o Git acabou de criar:
+```bash
+cd notificacoes_ms
+```
+
+### 3. Ambiente Virtual
 ```bash
 python -m venv venv
 ```
 
-### 2. Ativação 
+### 4. Ativação 
 
 Windows:
 ```bash 
@@ -20,13 +32,13 @@ Linux/Mac:
 source venv/bin/activate
 ```
 
-### 3. Dependências
+### 5. Dependências
 ```bash 
 pip install django djangorestframework django-cors-headers
 pip freeze > requirements.txt
 ```
 
-### 4. Banco de Dados e Superusuário
+### 6. Banco de Dados e Superusuário
 O projeto usa PostgreSQL por padrão. Caso queira usar SQLite, altere o DATABASES no settings.py.
 ```bash 
 python manage.py makemigrations notificacoes
@@ -34,7 +46,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-### 5. Execução (Porta Isolada)
+### 7. Execução (Porta Isolada)
 #### Como o Portfólio já roda na porta 8000, o microserviço deve ser executado obrigatoriamente na porta 8001:
 ```bash 
 python manage.py runserver 8001
