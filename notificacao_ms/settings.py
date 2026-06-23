@@ -59,6 +59,22 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
 ]
 
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+
+    # ─── ADICIONE ESTES DOIS CAMPOS ABAIXO: ───
+    "x-api-key",
+    "x-user-id",
+]
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'DEFAULT_PERMISSION_CLASSES': [],
